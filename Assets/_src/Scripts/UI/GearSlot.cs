@@ -9,8 +9,13 @@ namespace KaitoMajima
         {
             var dragObj = eventData.pointerDrag;
 
+            if(!dragObj.TryGetComponent(out InventoryItem itemInstance))
+                return;
+            
+            itemInstance.RemoveFromInventory();
+
             Debug.Log($"Você dropou o {dragObj.name} no encaixe!");
-            Destroy(dragObj);
+            
         }
 
         public void OnPointerEnter(PointerEventData eventData)

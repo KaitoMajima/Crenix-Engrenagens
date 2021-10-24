@@ -6,7 +6,6 @@ namespace KaitoMajima
     public class InventorySlot : MonoBehaviour, IDropHandler
     {
         private Inventory _inventory;
-
         private InventoryItem _currentItem;
         public InventoryItem CurrentItem {get => _currentItem; set => _currentItem = value;}
         private GameObject _currentItemObj;
@@ -40,8 +39,8 @@ namespace KaitoMajima
             if(!dragObj.TryGetComponent(out InventoryItem itemInstance))
                 return;
 
-            var item = itemInstance.currentSlot.CurrentItem;
-            var instanceIndex = itemInstance.currentSlot.index;
+            var item = itemInstance.CurrentSlot.CurrentItem;
+            var instanceIndex = itemInstance.CurrentSlot.index;
 
             _inventory.SwapItem(item, instanceIndex, index);
         }
@@ -51,7 +50,7 @@ namespace KaitoMajima
             if (item != null)
             {
                 var itemInstance = Instantiate(item, transform, false);
-                itemInstance.currentSlot = this;
+                itemInstance.SetInventory(_inventory).SetSlot(this);
 
                 _currentItem = item;
                 _currentItemObj = itemInstance.gameObject;
@@ -61,7 +60,7 @@ namespace KaitoMajima
         private void DestroyCurrentItem()
         {
             _currentItem = null;
-            
+
             if (_currentItemObj != null)
                 Destroy(_currentItemObj);
         }
