@@ -9,7 +9,8 @@ namespace KaitoMajima
         {
             var dragObj = eventData.pointerDrag;
 
-            Debug.Log($"You have dropped the {dragObj.name} onto the slot!");
+            Debug.Log($"Você dropou o {dragObj.name} no encaixe!");
+            Destroy(dragObj);
         }
 
         public void OnPointerEnter(PointerEventData eventData)
@@ -18,7 +19,7 @@ namespace KaitoMajima
             if(dragObj == null)
                 return;
             
-            Debug.Log(dragObj.name + " is entering the area of the slot.");
+            Debug.Log(dragObj.name + " está entrando na área do encaixe.");
         }
     }
 }

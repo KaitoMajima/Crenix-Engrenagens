@@ -3,10 +3,11 @@ using UnityEngine.EventSystems;
 
 namespace KaitoMajima
 {
-    public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+    public class ItemMovement : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
     {
-        [SerializeField] private Transform _movingTransform;
+        [SerializeField] private RectTransform _movingTransform;
         [SerializeField] private CanvasGroup _canvasGroup;
+        [SerializeField] private Vector2 _defaultPosition;
         public void OnBeginDrag(PointerEventData eventData)
         {
             _canvasGroup.blocksRaycasts = false;
@@ -14,13 +15,14 @@ namespace KaitoMajima
 
         public void OnDrag(PointerEventData eventData)
         {
-            _movingTransform.position += (Vector3)eventData.delta;
+            _movingTransform.position = eventData.position;
         }
 
         public void OnEndDrag(PointerEventData eventData)
         {
             _canvasGroup.blocksRaycasts = true;
-            
+
+            _movingTransform.anchoredPosition = _defaultPosition;
         }
     }
 }
