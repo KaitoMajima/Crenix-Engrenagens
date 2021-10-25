@@ -215,7 +215,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3564196342425327578, guid: 2dcfffe4efc15404a94f43c69376ed43, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3564196342425327578, guid: 2dcfffe4efc15404a94f43c69376ed43, type: 3}
       propertyPath: m_LocalPosition.x
@@ -259,7 +259,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3564196342425327579, guid: 2dcfffe4efc15404a94f43c69376ed43, type: 3}
       propertyPath: m_Name
-      value: Gear Slot (3)
+      value: Gear Slot (1)
       objectReference: {fileID: 0}
     - target: {fileID: 3564196343649637044, guid: 2dcfffe4efc15404a94f43c69376ed43, type: 3}
       propertyPath: m_Camera
@@ -329,7 +329,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "PA\xC7OCA"
+  m_text: Encaixe as engrenagens em qualquer ordem!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 232a243ba3b5fd6479c4d5245e669e04, type: 2}
   m_sharedMaterial: {fileID: -5935166952555295945, guid: 232a243ba3b5fd6479c4d5245e669e04, type: 2}
@@ -362,7 +362,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 16
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -763,6 +763,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &741735400 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2120022553161511166, guid: 2dcfffe4efc15404a94f43c69376ed43, type: 3}
+  m_PrefabInstance: {fileID: 167107061}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b71a0b4a3ae7f74fb8a9c6dc94d5834, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &876439384
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,6 +806,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &888816067 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2120022553161511166, guid: 2dcfffe4efc15404a94f43c69376ed43, type: 3}
+  m_PrefabInstance: {fileID: 3564196343217892465}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b71a0b4a3ae7f74fb8a9c6dc94d5834, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &926792619 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3564196342425327578, guid: 2dcfffe4efc15404a94f43c69376ed43, type: 3}
@@ -809,7 +831,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3564196342425327578, guid: 2dcfffe4efc15404a94f43c69376ed43, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3564196342425327578, guid: 2dcfffe4efc15404a94f43c69376ed43, type: 3}
       propertyPath: m_LocalPosition.x
@@ -853,7 +875,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3564196342425327579, guid: 2dcfffe4efc15404a94f43c69376ed43, type: 3}
       propertyPath: m_Name
-      value: Gear Slot (2)
+      value: Gear Slot (4)
       objectReference: {fileID: 0}
     - target: {fileID: 3564196343649637044, guid: 2dcfffe4efc15404a94f43c69376ed43, type: 3}
       propertyPath: m_Camera
@@ -866,6 +888,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3564196342425327578, guid: 2dcfffe4efc15404a94f43c69376ed43, type: 3}
   m_PrefabInstance: {fileID: 957852009}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1032388116 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2120022553161511166, guid: 2dcfffe4efc15404a94f43c69376ed43, type: 3}
+  m_PrefabInstance: {fileID: 1403995462}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b71a0b4a3ae7f74fb8a9c6dc94d5834, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1115798691
 GameObject:
   m_ObjectHideFlags: 0
@@ -951,7 +984,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3564196342425327578, guid: 2dcfffe4efc15404a94f43c69376ed43, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3564196342425327578, guid: 2dcfffe4efc15404a94f43c69376ed43, type: 3}
       propertyPath: m_LocalPosition.x
@@ -995,7 +1028,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3564196342425327579, guid: 2dcfffe4efc15404a94f43c69376ed43, type: 3}
       propertyPath: m_Name
-      value: Gear Slot (1)
+      value: Gear Slot (2)
       objectReference: {fileID: 0}
     - target: {fileID: 3564196343649637044, guid: 2dcfffe4efc15404a94f43c69376ed43, type: 3}
       propertyPath: m_Camera
@@ -1325,7 +1358,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3564196342425327578, guid: 2dcfffe4efc15404a94f43c69376ed43, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3564196342425327578, guid: 2dcfffe4efc15404a94f43c69376ed43, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1369,7 +1402,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3564196342425327579, guid: 2dcfffe4efc15404a94f43c69376ed43, type: 3}
       propertyPath: m_Name
-      value: Gear Slot (4)
+      value: Gear Slot (3)
       objectReference: {fileID: 0}
     - target: {fileID: 3564196343649637044, guid: 2dcfffe4efc15404a94f43c69376ed43, type: 3}
       propertyPath: m_Camera
@@ -1569,6 +1602,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1700439240}
+  - component: {fileID: 1700439241}
   m_Layer: 0
   m_Name: Slots
   m_TagString: Untagged
@@ -1588,13 +1622,32 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 926792619}
-  - {fileID: 1116516465}
-  - {fileID: 957852010}
   - {fileID: 167107062}
+  - {fileID: 1116516465}
   - {fileID: 1403995463}
+  - {fileID: 957852010}
   m_Father: {fileID: 876439385}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1700439241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700439239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebdb29216391d9b4c8fc02af8ff7003c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gearSlots:
+  - {fileID: 888816067}
+  - {fileID: 741735400}
+  - {fileID: 1795532870}
+  - {fileID: 1032388116}
+  - {fileID: 1798921100}
+  _rotationInterval: 0.2
 --- !u!1 &1764778977
 GameObject:
   m_ObjectHideFlags: 0
@@ -1729,6 +1782,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1764778977}
   m_CullTransparentMesh: 1
+--- !u!114 &1795532870 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2120022553161511166, guid: 2dcfffe4efc15404a94f43c69376ed43, type: 3}
+  m_PrefabInstance: {fileID: 1116516464}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b71a0b4a3ae7f74fb8a9c6dc94d5834, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1798921100 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2120022553161511166, guid: 2dcfffe4efc15404a94f43c69376ed43, type: 3}
+  m_PrefabInstance: {fileID: 957852009}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b71a0b4a3ae7f74fb8a9c6dc94d5834, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1907672110
 GameObject:
   m_ObjectHideFlags: 0
@@ -1806,6 +1881,9 @@ GameObject:
   - component: {fileID: 2048861370}
   - component: {fileID: 2048861372}
   - component: {fileID: 2048861371}
+  - component: {fileID: 2048861375}
+  - component: {fileID: 2048861374}
+  - component: {fileID: 2048861373}
   m_Layer: 5
   m_Name: Nugget
   m_TagString: Untagged
@@ -1870,6 +1948,80 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2048861369}
   m_CullTransparentMesh: 1
+--- !u!114 &2048861373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048861369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b48eac4d5d74b54439cc94f44a639add, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tweenSettings:
+    initializeMethod: 0
+    tweenOrientation: 0
+    updateType: 0
+    ignoreTimeScale: 0
+    loopAmount: -1
+    loopType: 1
+    isRelative: 1
+    isInverted: 0
+    duration: 0.2
+    delay: 0
+    easeType: 7
+  _tweeningTransform: {fileID: 2048861370}
+  _targetDestination: {x: 0, y: 50}
+--- !u!114 &2048861374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048861369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71e97905ed9f556469fba9407c518f59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tweenSettings:
+    initializeMethod: 0
+    tweenOrientation: 0
+    updateType: 0
+    ignoreTimeScale: 0
+    loopAmount: -1
+    loopType: 1
+    isRelative: 0
+    isInverted: 0
+    duration: 0.2
+    delay: 0
+    easeType: 35
+  _tweeningTransform: {fileID: 2048861370}
+  _scaleTarget: {x: 0.6, y: 1, z: 1}
+--- !u!114 &2048861375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048861369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4c8a817acb79754b8eccac078a7d20a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gearSlotsMaster: {fileID: 1700439241}
+  _bubbleText: {fileID: 172736798}
+  _happyAnimationTweens:
+  - {fileID: 2048861374}
+  - {fileID: 2048861373}
+  _initialText: 'Encaixe as engrenagens em qualquer
+
+    ordem.'
+  _waitingText: ...
+  _finishedText: "Yay, parab\xE9ns. Task conclu\xEDda!"
 --- !u!1001 &3564196343217892465
 PrefabInstance:
   m_ObjectHideFlags: 0
