@@ -6,10 +6,10 @@ namespace KaitoMajima
 {
     public class Inventory : MonoBehaviour
     {
-        [SerializeField] private List<InventoryItem> _items;
+        [SerializeField] private List<Item> _items;
         [SerializeField] private int _inventoryCapacity = 5;
         public int Capacity {get => _inventoryCapacity; set => _inventoryCapacity = value;}
-        public Action<List<InventoryItem>> InventoryUpdated;
+        public Action<List<Item>> InventoryUpdated;
         private void Awake()
         {
             InitiateItemList();
@@ -23,82 +23,66 @@ namespace KaitoMajima
             }
             
         }
-        public bool AddItem(InventoryItem itemObj, bool updateInventory = true)
+        public void UpdateInventory()
+        {
+            InventoryUpdated?.Invoke(_items);
+        }
+        public bool AddItem(Item item)
         {
             for (int i = 0; i < _items.Count; i++)
             {
-                var item = _items[i];
+                var searchedItem = _items[i];
 
-                if(item != null)
+                if(searchedItem != null)
                     continue;
                 
-                _items[i] = itemObj;
-
-                if(updateInventory)
-                    InventoryUpdated?.Invoke(_items);
-                
+                _items[i] = item;
                 return true;
             }
             Debug.LogWarning("O inventário está cheio!");
             return false;
         }
-        
-        public void AddItems(List<InventoryItem> itemObjs, bool updateInventory = true)
-        {
-            foreach (var item in itemObjs)
-            {
-                var hasLimitReached = !(AddItem(item, false));
-
-                if(hasLimitReached)
-                    return;
-            }
-
-            if(updateInventory)
-                InventoryUpdated?.Invoke(_items);
-        }
-        public bool AddItem(InventoryItem item, int index, bool updateInventory = true)
+        public bool AddItem(Item item, int index)
         {
             if(_items[index] != null)
             {
                 Debug.LogWarning("Já existe um item nesse slot!");
                 return false;
             }
-            
             _items[index] = item;
-
-            if(updateInventory)
-                InventoryUpdated?.Invoke(_items);
             
             return true;
         }
+        
+        public void AddItems(List<Item> items)
+        {
+            foreach (var item in items)
+            {
+                var hasLimitReached = !(AddItem(item));
 
-        public bool RemoveItem(int index, bool updateInventory = true)
+                if(hasLimitReached)
+                    return;
+            }
+        }
+
+        public bool RemoveItem(int index)
         {
             _items[index] = null;
-
-            if(updateInventory)
-                InventoryUpdated?.Invoke(_items);
-            
             return true;
         }
 
-        public bool SwapItem(InventoryItem swappingItem, int originalIndex, int newIndex, bool updateInventory = true)
+        public bool SwapItem(Item swappingItem, int originalIndex, int newIndex)
         {
             var swappedItem = _items[newIndex];
 
             if(swappingItem == swappedItem)
                 return false;
 
-            Debug.Log(swappingItem);
+            RemoveItem(newIndex);
+            RemoveItem(originalIndex);
 
-            RemoveItem(newIndex, false);
-            RemoveItem(originalIndex, false);
-
-            AddItem(swappingItem, newIndex, false);
-            AddItem(swappedItem, originalIndex, false);
-
-            if(updateInventory)
-                InventoryUpdated?.Invoke(_items);
+            AddItem(swappingItem, newIndex);
+            AddItem(swappedItem, originalIndex);
 
             return true;
         }

@@ -5,10 +5,9 @@ namespace KaitoMajima
 {
     public class InventorySlot : MonoBehaviour, IDropHandler
     {
+        [SerializeField] private GameObject _defaultItemPrefab;
         private Inventory _inventory;
-        private InventoryItem _currentItem;
-        public InventoryItem CurrentItem {get => _currentItem; set => _currentItem = value;}
-        private GameObject _currentItemObj;
+        private InventoryItem _defaultItemInstance;
         public int index;
 
         public InventorySlot SetInventory(Inventory inventory)
@@ -21,11 +20,20 @@ namespace KaitoMajima
             this.index = index;
             return this;
         }
-
-        public InventorySlot SetItem(InventoryItem itemObj)
+        public InventorySlot Initialize(Transform draggingObjectsTransform)
         {
-            DestroyCurrentItem();
-            InstantiateNewItem(itemObj);
+            var itemInstanceObj = Instantiate(_defaultItemPrefab, transform);
+
+            if(itemInstanceObj.TryGetComponent(out ItemMovement itemMovement))
+                itemMovement.draggingObjectsTransform = draggingObjectsTransform;
+
+            _defaultItemInstance = itemInstanceObj.GetComponent<InventoryItem>();
+
+            return this;
+        }
+        public InventorySlot SetItem(Item item)
+        {
+            ChangeItem(item);
 
             return this;
         }
@@ -39,31 +47,17 @@ namespace KaitoMajima
             if(!dragObj.TryGetComponent(out InventoryItem itemInstance))
                 return;
 
-            var item = itemInstance.CurrentSlot.CurrentItem;
+            var item = itemInstance.Item;
             var instanceIndex = itemInstance.CurrentSlot.index;
 
             _inventory.SwapItem(item, instanceIndex, index);
+            _inventory.UpdateInventory();
         }
-
-        private void InstantiateNewItem(InventoryItem item)
+        private void ChangeItem(Item item)
         {
-            if (item != null)
-            {
-                var itemInstance = Instantiate(item, transform, false);
-                itemInstance.SetInventory(_inventory).SetSlot(this);
-
-                _currentItem = item;
-                _currentItemObj = itemInstance.gameObject;
-            }
+            _defaultItemInstance.SetInventory(_inventory)
+                    .SetSlot(this)
+                    .SetInfo(item);
         }
-
-        private void DestroyCurrentItem()
-        {
-            _currentItem = null;
-
-            if (_currentItemObj != null)
-                Destroy(_currentItemObj);
-        }
-
     }
 }

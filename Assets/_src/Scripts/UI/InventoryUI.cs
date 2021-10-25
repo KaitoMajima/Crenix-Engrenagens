@@ -9,6 +9,7 @@ namespace KaitoMajima
         [SerializeField] private Inventory _inventory;
         [SerializeField] private GameObject _slotPrefab;
         [SerializeField] private Transform _slotsTransform;
+        [SerializeField] private Transform _draggingObjectsTransform;
         private List<InventorySlot> _currentInventorySlots;
 
         private void Awake()
@@ -25,18 +26,21 @@ namespace KaitoMajima
                 var slotObj = Instantiate(_slotPrefab, _slotsTransform);
                 var slot = slotObj.GetComponent<InventorySlot>();
 
-                slot.SetInventory(_inventory).SetIndex(i);
+                slot.SetInventory(_inventory).
+                    SetIndex(i).
+                    Initialize(_draggingObjectsTransform);
 
                 _currentInventorySlots.Add(slot);
             }
         }
-        private void OnInventoryUpdated(List<InventoryItem> items)
+        private void OnInventoryUpdated(List<Item> items)
         {
             for (int i = 0; i < _currentInventorySlots.Count; i++)
             {
                 var slot = _currentInventorySlots[i];
                 
                 slot.SetItem(items[i]);
+                
             }
         }
     
