@@ -24,5 +24,16 @@ Github ou equivalente. ✓
 ## Resultado Final:
 ![Gameplay12](https://user-images.githubusercontent.com/68963406/138772357-03a7bc79-88b0-485f-984f-d7676562750a.gif)
 
+## Devlogs:
 
+Acesse meus devlogs abaixo para entender como eu implementei as mecânicas:
 
+#### [Devlog 1 - Setup do projeto](https://github.com/KaitoMajima/Crenix-Engrenagens/blob/main/Devlogs/DL1-SetupProjeto.md)
+#### [Devlog 2 - Montagem da UI](https://github.com/KaitoMajima/Crenix-Engrenagens/blob/main/Devlogs/DL2-MontagemUI.md)
+#### [Devlog 3 - Drag N' Drop](https://github.com/KaitoMajima/Crenix-Engrenagens/blob/main/Devlogs/DL3-DragNDrop.md)
+#### [Devlog 4 - Inventário](https://github.com/KaitoMajima/Crenix-Engrenagens/blob/main/Devlogs/DL4-Inventario.md)
+#### [Devlog 5 - Engrenagens nos Encaixes](https://github.com/KaitoMajima/Crenix-Engrenagens/blob/main/Devlogs/DL5-EngrenagensNosEncaixes.md)
+#### [Devlog 6 - Nugget States](https://github.com/KaitoMajima/Crenix-Engrenagens/blob/main/Devlogs/DL6-NuggetStates.md)
+#### [Devlog 7 - Botão de Reset](https://github.com/KaitoMajima/Crenix-Engrenagens/blob/main/Devlogs/DL7-BotaoDeReset.md)
+#### [Devlog 8 - Features Extra](https://github.com/KaitoMajima/Crenix-Engrenagens/blob/main/Devlogs/DL8-FeaturesExtra.md)
+#### [Devlog 9 - Finalização](https://github.com/KaitoMajima/Crenix-Engrenagens/blob/main/Devlogs/DL9-Finalizacao.md)
