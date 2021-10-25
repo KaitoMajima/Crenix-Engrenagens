@@ -1,11 +1,22 @@
-# Crenix-Engrenagens
+# Teste da Crenix - Engrenagens
  
 Minha implementação para o teste das engrenagens da Crenix Games.
 
 Para o desafio, é necessário montar uma cena no qual o jogador possa **mover engrenagens** do inventário e soltá-las nos encaixes do mundo. E quando todas as engrenagens **estiverem encaixadas** em seus lugares, elas começarão a girar, e o Nugget (mascote da Crenix Games) irá reagir com sucesso sobre a task concluída!
 
+### Como acessar o projeto
+
+Acesse os scripts na pasta Assets/\_src/Scripts.
+
+Acesse a cena principal na pasta Assets/\_src/Scenes/Teste.
+
+Demais itens produzidos para o teste acessados na pasta Assets/\_src.
+
+
+Versão da Unity 2020.3.6f1.
+
 ### Features necessárias:
-**Arrastar** as engrenagens da UI para o mundo e posicioná-los em qualquer um
+- **Arrastar** as engrenagens da UI para o mundo e posicioná-los em qualquer um
 dos lugares disponíveis ✓
 - Possibilidade de **arrastar** uma a uma as engrenagens do mundo e retorná-las
 para qualquer slot da UI ✓
