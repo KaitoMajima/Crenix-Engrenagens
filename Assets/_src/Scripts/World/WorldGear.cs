@@ -13,9 +13,12 @@ namespace KaitoMajima
             return this;
         }
         
-        public void Rotate()
+        public void Rotate(bool clockwise)
         {
+            _rotateTween.tweenSettings.isInverted = clockwise;
+            
             _rotateTween.CallTween();
+
         }
     }
 }

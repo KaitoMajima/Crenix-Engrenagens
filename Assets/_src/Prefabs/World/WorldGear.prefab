@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71e97905ed9f556469fba9407c518f59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tweenSettings:
+  tweenSettings:
     initializeMethod: 1
     tweenOrientation: 0
     updateType: 0
@@ -106,7 +106,7 @@ MonoBehaviour:
     loopType: 0
     isRelative: 0
     isInverted: 0
-    duration: 0.4
+    duration: 0.25
     delay: 0
     easeType: 27
   _tweeningTransform: {fileID: 4473613036469116944}
@@ -123,16 +123,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0af70d2cf3192e34b86487aeb3a27af5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tweenSettings:
+  tweenSettings:
     initializeMethod: 0
-    tweenOrientation: 0
+    tweenOrientation: 1
     updateType: 0
     ignoreTimeScale: 0
     loopAmount: -1
     loopType: 2
     isRelative: 0
-    isInverted: 1
-    duration: 1
+    isInverted: 0
+    duration: 3
     delay: 0
     easeType: 1
   _tweeningTransform: {fileID: 4473613036469116944}

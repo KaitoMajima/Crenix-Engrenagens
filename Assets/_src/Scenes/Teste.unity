@@ -213,6 +213,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700439240}
     m_Modifications:
+    - target: {fileID: 2120022553161511166, guid: 2dcfffe4efc15404a94f43c69376ed43, type: 3}
+      propertyPath: _reverseRotationForGears
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3564196342425327578, guid: 2dcfffe4efc15404a94f43c69376ed43, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1134,9 +1138,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inventory: {fileID: 1353614084}
-  _slotPrefab: {fileID: 7827371984949652844, guid: b58ff8bcaadc4764f80c486b812f7a06, type: 3}
   _slotsTransform: {fileID: 1125559268}
   _draggingObjectsTransform: {fileID: 1269779102}
+  _slotPrefab: {fileID: 7827371984949652844, guid: b58ff8bcaadc4764f80c486b812f7a06, type: 3}
 --- !u!1 &1205549229
 GameObject:
   m_ObjectHideFlags: 0
@@ -1373,6 +1377,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700439240}
     m_Modifications:
+    - target: {fileID: 2120022553161511166, guid: 2dcfffe4efc15404a94f43c69376ed43, type: 3}
+      propertyPath: _reverseRotationForGears
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3564196342425327578, guid: 2dcfffe4efc15404a94f43c69376ed43, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1977,7 +1985,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48eac4d5d74b54439cc94f44a639add, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tweenSettings:
+  tweenSettings:
     initializeMethod: 0
     tweenOrientation: 0
     updateType: 0
@@ -1988,7 +1996,7 @@ MonoBehaviour:
     isInverted: 0
     duration: 0.2
     delay: 0
-    easeType: 7
+    easeType: 35
   _tweeningTransform: {fileID: 2048861370}
   _targetDestination: {x: 0, y: 50}
 --- !u!114 &2048861374
@@ -2003,7 +2011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71e97905ed9f556469fba9407c518f59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tweenSettings:
+  tweenSettings:
     initializeMethod: 0
     tweenOrientation: 0
     updateType: 0
@@ -2014,7 +2022,7 @@ MonoBehaviour:
     isInverted: 0
     duration: 0.4
     delay: 0
-    easeType: 35
+    easeType: 7
   _tweeningTransform: {fileID: 2048861370}
   _scaleTarget: {x: 0.6, y: 1, z: 1}
 --- !u!114 &2048861375
@@ -2029,11 +2037,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c8a817acb79754b8eccac078a7d20a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gearSlotsMaster: {fileID: 1700439241}
   _bubbleText: {fileID: 172736798}
   _happyAnimationTweens:
   - {fileID: 2048861374}
   - {fileID: 2048861373}
+  _gearSlotsMaster: {fileID: 1700439241}
   _initialText: Encaixe as engrenagens em qualquer ordem!
   _waitingText: ...
   _finishedText: "Yay, parab\xE9ns. \nTask conclu\xEDda!"

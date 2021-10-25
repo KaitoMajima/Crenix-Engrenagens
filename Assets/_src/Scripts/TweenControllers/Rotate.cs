@@ -16,10 +16,10 @@ namespace KaitoMajima
 
             _originalRotation = _tweeningTransform.localEulerAngles;
 
-            Tween tween = _tweeningTransform.DOLocalRotate(_rotatingTarget, _tweenSettings.duration, RotateMode.FastBeyond360);
+            Tween tween = _tweeningTransform.DOLocalRotate(_rotatingTarget, tweenSettings.duration, RotateMode.FastBeyond360);
 
-            if(_tweenSettings.tweenOrientation == TweenSettings.TweenOrientation.From)
-                tween = _tweeningTransform.DOLocalRotate(_rotatingTarget, _tweenSettings.duration, RotateMode.FastBeyond360).From();
+            if(tweenSettings.tweenOrientation == TweenSettings.TweenOrientation.From)
+                tween = _tweeningTransform.DOLocalRotate(_rotatingTarget, tweenSettings.duration, RotateMode.FastBeyond360).From();
 
             return tween;
         }
@@ -28,10 +28,10 @@ namespace KaitoMajima
         {
             _mainTween.Kill(true);
 
-            Tween tween = _tweeningTransform.DOLocalRotate(_originalRotation, _tweenSettings.duration, RotateMode.FastBeyond360);
+            Tween tween = _tweeningTransform.DOLocalRotate(_originalRotation, tweenSettings.duration, RotateMode.FastBeyond360);
 
-            if(_tweenSettings.tweenOrientation == TweenSettings.TweenOrientation.From)
-                tween = _tweeningTransform.DOLocalRotate(_originalRotation, _tweenSettings.duration, RotateMode.FastBeyond360).From();
+            if(tweenSettings.tweenOrientation == TweenSettings.TweenOrientation.From)
+                tween = _tweeningTransform.DOLocalRotate(_originalRotation, tweenSettings.duration, RotateMode.FastBeyond360).From();
 
             return tween;
         }

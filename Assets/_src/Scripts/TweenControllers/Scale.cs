@@ -16,10 +16,10 @@ namespace KaitoMajima
             
             _originalScale = _tweeningTransform.localScale;
 
-            Tween tween = _tweeningTransform.DOScale(_scaleTarget, _tweenSettings.duration);
+            Tween tween = _tweeningTransform.DOScale(_scaleTarget, tweenSettings.duration);
 
-            if(_tweenSettings.tweenOrientation == TweenSettings.TweenOrientation.From)
-                tween = _tweeningTransform.DOScale(_scaleTarget, _tweenSettings.duration).From();
+            if(tweenSettings.tweenOrientation == TweenSettings.TweenOrientation.From)
+                tween = _tweeningTransform.DOScale(_scaleTarget, tweenSettings.duration).From();
 
             return tween;
         }
@@ -28,10 +28,10 @@ namespace KaitoMajima
         {
             _mainTween.Kill(true);
 
-            Tween tween = _tweeningTransform.DOScale(_originalScale, _tweenSettings.duration);
+            Tween tween = _tweeningTransform.DOScale(_originalScale, tweenSettings.duration);
 
-            if(_tweenSettings.tweenOrientation == TweenSettings.TweenOrientation.From)
-                tween = _tweeningTransform.DOScale(_originalScale, _tweenSettings.duration).From();
+            if(tweenSettings.tweenOrientation == TweenSettings.TweenOrientation.From)
+                tween = _tweeningTransform.DOScale(_originalScale, tweenSettings.duration).From();
 
             return tween;
         }

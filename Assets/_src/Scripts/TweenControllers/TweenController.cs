@@ -6,7 +6,7 @@ namespace KaitoMajima
 {
     public abstract class TweenController : MonoBehaviour
     {
-        [SerializeField] protected TweenSettings _tweenSettings = TweenSettings.Default;
+        public TweenSettings tweenSettings = TweenSettings.Default;
 
         protected Tween _mainTween;
         public Action onTweenFinished;
@@ -14,26 +14,26 @@ namespace KaitoMajima
         #region Initialize Methods
         private void Awake()
         {
-            if(_tweenSettings.initializeMethod == TweenSettings.InitializeMethod.Awake)
+            if(tweenSettings.initializeMethod == TweenSettings.InitializeMethod.Awake)
                 CallTween();
         }
         private void Start()
         {
-            if(_tweenSettings.initializeMethod == TweenSettings.InitializeMethod.Start)
+            if(tweenSettings.initializeMethod == TweenSettings.InitializeMethod.Start)
                 CallTween();
 
 
         }
         private void OnEnable()
         {
-            if(_tweenSettings.initializeMethod == TweenSettings.InitializeMethod.OnEnable)
+            if(tweenSettings.initializeMethod == TweenSettings.InitializeMethod.OnEnable)
                 CallTween();
 
 
         }
         private void OnDisable()
         {
-            if(_tweenSettings.initializeMethod == TweenSettings.InitializeMethod.OnDisable)
+            if(tweenSettings.initializeMethod == TweenSettings.InitializeMethod.OnDisable)
                 CallTween();
 
         }
@@ -61,12 +61,12 @@ namespace KaitoMajima
         protected virtual Tween ApplyTweenSettings(Tween tween)
         {
             tween.
-                SetEase(_tweenSettings.easeType).
-                SetLoops(_tweenSettings.loopAmount, _tweenSettings.loopType).
-                SetDelay(_tweenSettings.delay).
-                SetUpdate(_tweenSettings.updateType, _tweenSettings.ignoreTimeScale).
-                SetRelative(_tweenSettings.isRelative).
-                SetInverted(_tweenSettings.isInverted).
+                SetEase(tweenSettings.easeType).
+                SetLoops(tweenSettings.loopAmount, tweenSettings.loopType).
+                SetDelay(tweenSettings.delay).
+                SetUpdate(tweenSettings.updateType, tweenSettings.ignoreTimeScale).
+                SetRelative(tweenSettings.isRelative).
+                SetInverted(tweenSettings.isInverted).
                 OnComplete(() => onTweenFinished?.Invoke());
 
  

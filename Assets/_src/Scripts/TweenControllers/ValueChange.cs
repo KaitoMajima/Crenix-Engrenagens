@@ -18,11 +18,11 @@ namespace KaitoMajima
 
             _originalValue = Value;
 
-            Tween tween = DOTween.To(() => Value, x => Value = x, _endValue, _tweenSettings.duration).
+            Tween tween = DOTween.To(() => Value, x => Value = x, _endValue, tweenSettings.duration).
                 OnUpdate(() => onValueChange?.Invoke(Value));
 
-            if(_tweenSettings.tweenOrientation == TweenSettings.TweenOrientation.From)
-                tween = DOTween.To(() => Value, x => Value = x, _endValue, _tweenSettings.duration).
+            if(tweenSettings.tweenOrientation == TweenSettings.TweenOrientation.From)
+                tween = DOTween.To(() => Value, x => Value = x, _endValue, tweenSettings.duration).
                 OnUpdate(() => onValueChange?.Invoke(Value)).From();
 
             return tween;
@@ -32,11 +32,11 @@ namespace KaitoMajima
         {
             _mainTween.Kill(true);
 
-            Tween tween = DOTween.To(() => Value, x => Value = x, _originalValue, _tweenSettings.duration).
+            Tween tween = DOTween.To(() => Value, x => Value = x, _originalValue, tweenSettings.duration).
                 OnUpdate(() => onValueChange?.Invoke(Value));
 
-            if(_tweenSettings.tweenOrientation == TweenSettings.TweenOrientation.From)
-                tween = DOTween.To(() => Value, x => Value = x, _originalValue, _tweenSettings.duration).
+            if(tweenSettings.tweenOrientation == TweenSettings.TweenOrientation.From)
+                tween = DOTween.To(() => Value, x => Value = x, _originalValue, tweenSettings.duration).
                 OnUpdate(() => onValueChange?.Invoke(Value)).From();
 
             return tween;

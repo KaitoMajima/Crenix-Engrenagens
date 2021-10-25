@@ -16,10 +16,10 @@ namespace KaitoMajima
 
             _originalPosition = _tweeningTransform.localPosition;
 
-            Tween tween = _tweeningTransform.DOLocalMove(_targetDestination, _tweenSettings.duration);
+            Tween tween = _tweeningTransform.DOLocalMove(_targetDestination, tweenSettings.duration);
 
-            if(_tweenSettings.tweenOrientation == TweenSettings.TweenOrientation.From)
-                tween = _tweeningTransform.DOLocalMove(_targetDestination, _tweenSettings.duration).From();
+            if(tweenSettings.tweenOrientation == TweenSettings.TweenOrientation.From)
+                tween = _tweeningTransform.DOLocalMove(_targetDestination, tweenSettings.duration).From();
 
             return tween;
         }
@@ -28,10 +28,10 @@ namespace KaitoMajima
         {
             _mainTween.Kill(true);
 
-            Tween tween = _tweeningTransform.DOLocalMove(_originalPosition, _tweenSettings.duration);
+            Tween tween = _tweeningTransform.DOLocalMove(_originalPosition, tweenSettings.duration);
 
-            if(_tweenSettings.tweenOrientation == TweenSettings.TweenOrientation.From)
-                tween = _tweeningTransform.DOLocalMove(_originalPosition, _tweenSettings.duration).From();
+            if(tweenSettings.tweenOrientation == TweenSettings.TweenOrientation.From)
+                tween = _tweeningTransform.DOLocalMove(_originalPosition, tweenSettings.duration).From();
 
             return tween;
         }

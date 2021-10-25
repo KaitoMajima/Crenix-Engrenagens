@@ -15,10 +15,10 @@ namespace KaitoMajima
             
             _originalFadeValue = _canvasGroup.alpha;
 
-            Tween tween = _canvasGroup.DOFade(_fadeEndValue, _tweenSettings.duration);
+            Tween tween = _canvasGroup.DOFade(_fadeEndValue, tweenSettings.duration);
 
-            if(_tweenSettings.tweenOrientation == TweenSettings.TweenOrientation.From)
-                tween = _canvasGroup.DOFade(_fadeEndValue, _tweenSettings.duration).From();
+            if(tweenSettings.tweenOrientation == TweenSettings.TweenOrientation.From)
+                tween = _canvasGroup.DOFade(_fadeEndValue, tweenSettings.duration).From();
 
             return tween;
         }
@@ -27,10 +27,10 @@ namespace KaitoMajima
         {
             _mainTween.Kill(true);
 
-            Tween tween = _canvasGroup.DOFade(_originalFadeValue, _tweenSettings.duration);
+            Tween tween = _canvasGroup.DOFade(_originalFadeValue, tweenSettings.duration);
 
-            if(_tweenSettings.tweenOrientation == TweenSettings.TweenOrientation.From)
-                tween = _canvasGroup.DOFade(_originalFadeValue, _tweenSettings.duration).From();
+            if(tweenSettings.tweenOrientation == TweenSettings.TweenOrientation.From)
+                tween = _canvasGroup.DOFade(_originalFadeValue, tweenSettings.duration).From();
 
             return tween;
         }

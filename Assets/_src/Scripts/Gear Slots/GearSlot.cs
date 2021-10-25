@@ -13,6 +13,9 @@ namespace KaitoMajima
 
         [Header("Scene Dependencies")]
         [SerializeField] private Transform _gearSocketTransform;
+
+        [Header("Settings")]
+        [SerializeField] private bool _reverseRotationForGears;
         private WorldGear _currentGear;
         public Action GearInserted;
         
@@ -41,7 +44,7 @@ namespace KaitoMajima
 
         public void IntitiateGearRotation()
         {
-            _currentGear.Rotate();
+            _currentGear.Rotate(_reverseRotationForGears);
         }
     }
 }
