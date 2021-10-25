@@ -14,7 +14,7 @@ namespace KaitoMajima
         
         public void Rotate()
         {
-            _rotateTween.CallTween(false);
+            _rotateTween.CallTween();
         }
     }
 }

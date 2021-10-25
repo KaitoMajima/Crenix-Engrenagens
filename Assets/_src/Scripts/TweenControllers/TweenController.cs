@@ -15,26 +15,26 @@ namespace KaitoMajima
         private void Awake()
         {
             if(_tweenSettings.initializeMethod == TweenSettings.InitializeMethod.Awake)
-                CallTween(false);
+                CallTween();
         }
         private void Start()
         {
             if(_tweenSettings.initializeMethod == TweenSettings.InitializeMethod.Start)
-                CallTween(false);
+                CallTween();
 
 
         }
         private void OnEnable()
         {
             if(_tweenSettings.initializeMethod == TweenSettings.InitializeMethod.OnEnable)
-                CallTween(false);
+                CallTween();
 
 
         }
         private void OnDisable()
         {
             if(_tweenSettings.initializeMethod == TweenSettings.InitializeMethod.OnDisable)
-                CallTween(false);
+                CallTween();
 
         }
         #endregion

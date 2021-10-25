@@ -10,7 +10,7 @@ namespace KaitoMajima
         [SerializeField] private List<GearSlot> _gearSlots;
         [SerializeField] private float _rotationInterval = 0.25f;
         private int _insertedGearCount;
-
+        private Coroutine _rotatingSequence;
         public Action AllInsertSequenceInitiated;
         public Action AllInsertSequenceFinished;
 
@@ -21,11 +21,23 @@ namespace KaitoMajima
                 gearSlot.GearInserted += OnGearInserted;
             }
         }
+        public void ResetGears()
+        {
+            if(_rotatingSequence != null)
+                StopCoroutine(_rotatingSequence);
+
+            _insertedGearCount = 0;
+            foreach (var gearSlot in _gearSlots)
+            {
+                gearSlot.ResetGear();
+            }
+
+        }
         private void OnGearInserted()
         {
             _insertedGearCount++;
             if(_insertedGearCount >= _gearSlots.Count)
-                StartCoroutine(InitiateRotatingSequence());
+                _rotatingSequence = StartCoroutine(InitiateRotatingSequence());
 
         }
 

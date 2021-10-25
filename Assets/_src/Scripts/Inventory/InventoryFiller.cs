@@ -10,9 +10,13 @@ namespace KaitoMajima
 
         private void Start()
         {
+            Fill();
+            _inventory.InventoryResetted += Fill;
+        }
+        private void Fill()
+        {
             _inventory.AddItems(_objsToFill);
             _inventory.UpdateInventory();
         }
-    
     }
 }

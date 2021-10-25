@@ -62,7 +62,7 @@ namespace KaitoMajima
                     _bubbleText.SetText(_finishedText);
                     foreach (var tween in _happyAnimationTweens)
                     {
-                        tween.CallTween(false);
+                        tween.CallTween();
                     }
                     break;
             }

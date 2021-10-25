@@ -10,6 +10,7 @@ namespace KaitoMajima
         [SerializeField] private int _inventoryCapacity = 5;
         public int Capacity {get => _inventoryCapacity; set => _inventoryCapacity = value;}
         public Action<List<Item>> InventoryUpdated;
+        public Action InventoryResetted;
         private void Awake()
         {
             InitiateItemList();
@@ -26,6 +27,13 @@ namespace KaitoMajima
         public void UpdateInventory()
         {
             InventoryUpdated?.Invoke(_items);
+        }
+
+        public void ResetInventory()
+        {
+            _items = new List<Item>();
+            InitiateItemList();
+            InventoryResetted?.Invoke();
         }
         public bool AddItem(Item item)
         {

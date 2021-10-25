@@ -15,6 +15,15 @@ namespace KaitoMajima
         {
             _slotDetection.DropDetected += OnGearDetected;
         }
+
+        public void ResetGear()
+        {
+            if(_currentGear != null)
+                Destroy(_currentGear.gameObject);
+            _currentGear = null;
+
+            _slotDetection.Occupied = false;
+        }
         private void OnGearDetected(Item item)
         {
             var gearObj = Instantiate(_gearPrefab, _gearSocketTransform);
