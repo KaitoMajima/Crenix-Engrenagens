@@ -1672,6 +1672,7 @@ MonoBehaviour:
   - {fileID: 1795532870}
   - {fileID: 1032388116}
   - {fileID: 1798921100}
+  _inventory: {fileID: 1353614084}
   _rotationInterval: 0.2
 --- !u!1 &1764778977
 GameObject:

@@ -7,6 +7,7 @@ namespace KaitoMajima
     {
         [Header("Local Dependencies")]
         [SerializeField] private SlotDetection _slotDetection;
+        [SerializeField] private RemovalDetection _removalDetection;
 
         [Header("Prefab Dependencies")]
         [SerializeField] private GameObject _gearPrefab;
@@ -18,10 +19,22 @@ namespace KaitoMajima
         [SerializeField] private bool _reverseRotationForGears;
         private WorldGear _currentGear;
         public Action GearInserted;
+        public Action<Item> GearRemoved;
         
         private void Start()
         {
             _slotDetection.DropDetected += OnGearDetected;
+            _removalDetection.RemoveCalled += OnRemoveGearCalled;
+        }
+
+        private void OnRemoveGearCalled()
+        {
+            if(_currentGear == null)
+                return;
+            var item = _currentGear.item;
+
+            GearRemoved?.Invoke(item);
+            ResetGear();
         }
 
         public void ResetGear()
@@ -37,7 +50,7 @@ namespace KaitoMajima
             var gearObj = Instantiate(_gearPrefab, _gearSocketTransform);
             _currentGear = gearObj.GetComponent<WorldGear>();
 
-            _currentGear.SetColor(item.spriteColor);
+            _currentGear.SetItem(item).SetColor(item.spriteColor);
 
             GearInserted?.Invoke();
         }
@@ -45,6 +58,14 @@ namespace KaitoMajima
         public void IntitiateGearRotation()
         {
             _currentGear.Rotate(_reverseRotationForGears);
+        }
+
+        public void StopGearRotation()
+        {
+            if(_currentGear == null)    
+                return;
+            
+            _currentGear.StopRotating();
         }
     }
 }

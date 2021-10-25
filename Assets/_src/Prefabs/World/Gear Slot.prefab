@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3564196342425327578}
   - component: {fileID: 3564196342425327581}
   - component: {fileID: 2120022553161511166}
+  - component: {fileID: 5620978308638972106}
   m_Layer: 0
   m_Name: Gear Slot
   m_TagString: Untagged
@@ -98,8 +99,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _slotDetection: {fileID: 3564196342462491926}
+  _removalDetection: {fileID: 4641456783553165555}
   _gearPrefab: {fileID: 8914305506811942573, guid: 0dca8d55eddd6ec4ebbf58e923c04c01, type: 3}
   _gearSocketTransform: {fileID: 6843077076031842678}
+  _reverseRotationForGears: 0
+--- !u!114 &5620978308638972106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3564196342425327579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aae95181d34d150498149d45cc3f56e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3564196342462491922
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,6 +127,7 @@ GameObject:
   - component: {fileID: 3564196342462491927}
   - component: {fileID: 3564196342462491924}
   - component: {fileID: 3564196342462491926}
+  - component: {fileID: 4641456783553165555}
   m_Layer: 5
   m_Name: Item Detection
   m_TagString: Untagged
@@ -186,6 +202,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 944ac2d7fd0b8d246a83f6bed61e978b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4641456783553165555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3564196342462491922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aae95181d34d150498149d45cc3f56e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &3564196343649637043
