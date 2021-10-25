@@ -5,6 +5,7 @@ namespace KaitoMajima
 {
     public class InventoryItem : MonoBehaviour
     {
+        [Header("Local Dependencies")]
         [SerializeField] private Image _spriteImage;
         private Item _item;
         public Item Item {get => _item;}

@@ -5,10 +5,11 @@ namespace KaitoMajima
 {
     public class InventorySlot : MonoBehaviour, IDropHandler
     {
+        [Header("Prefab Dependencies")]
         [SerializeField] private GameObject _defaultItemPrefab;
         private Inventory _inventory;
         private InventoryItem _defaultItemInstance;
-        public int index;
+        [HideInInspector] public int index;
 
         public InventorySlot SetInventory(Inventory inventory)
         {

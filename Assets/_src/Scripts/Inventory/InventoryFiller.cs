@@ -5,6 +5,7 @@ namespace KaitoMajima
 {
     public class InventoryFiller : MonoBehaviour
     {
+        [Header("Local Dependencies")]
         [SerializeField] private Inventory _inventory;
         [SerializeField] private List<Item> _objsToFill;
 

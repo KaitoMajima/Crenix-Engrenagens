@@ -5,8 +5,13 @@ namespace KaitoMajima
 {
     public class GearSlot : MonoBehaviour
     {
+        [Header("Local Dependencies")]
         [SerializeField] private SlotDetection _slotDetection;
+
+        [Header("Prefab Dependencies")]
         [SerializeField] private GameObject _gearPrefab;
+
+        [Header("Scene Dependencies")]
         [SerializeField] private Transform _gearSocketTransform;
         private WorldGear _currentGear;
         public Action GearInserted;

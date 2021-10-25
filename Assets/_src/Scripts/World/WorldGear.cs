@@ -4,6 +4,7 @@ namespace KaitoMajima
 {
     public class WorldGear : MonoBehaviour
     {
+        [Header("Local Dependencies")]
         [SerializeField] private SpriteRenderer _gearSpriteRenderer;
         [SerializeField] private Rotate _rotateTween;
         public WorldGear SetColor(Color color)

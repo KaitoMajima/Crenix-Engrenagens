@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -6,11 +5,16 @@ namespace KaitoMajima
 {
     public class ItemMovement : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
     {
+        [Header("Scene Dependencies")]
+        public Transform draggingObjectsTransform;
+
+        [Header("Local Dependencies")]
         [SerializeField] private RectTransform _movingTransform;
         [SerializeField] private CanvasGroup _canvasGroup;
-        [SerializeField] private Vector2 _defaultPosition;
         private Transform _originalTransform;
-        public Transform draggingObjectsTransform;
+
+        [Header("Settings")]
+        [SerializeField] private Vector2 _defaultPosition;
 
         private void Awake()
         {

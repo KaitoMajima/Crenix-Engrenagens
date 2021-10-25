@@ -6,13 +6,14 @@ namespace KaitoMajima
 {
     public class Nugget : MonoBehaviour
     {
-        [SerializeField] private GearSlotsMaster _gearSlotsMaster;
+        [Header("Local Dependencies")]
         [SerializeField] private TextMeshProUGUI _bubbleText;
         [SerializeField] private List<TweenController> _happyAnimationTweens;
 
-        private Vector3 _initialLocalScale;
-        private Vector3 _initialPosition;
+        [Header("Scene Dependencies")]
+        [SerializeField] private GearSlotsMaster _gearSlotsMaster;
 
+        [Header("Settings")]
         [Multiline(2)] [SerializeField] private string _initialText;
         [Multiline(2)] [SerializeField] private string _waitingText;
         [Multiline(2)] [SerializeField] private string _finishedText;
@@ -24,6 +25,8 @@ namespace KaitoMajima
             Finished
         }
         private NuggetState _nuggetState = NuggetState.Initial;
+        private Vector3 _initialLocalScale;
+        private Vector3 _initialPosition;
         private void Start()
         {
             _initialLocalScale = transform.localScale;

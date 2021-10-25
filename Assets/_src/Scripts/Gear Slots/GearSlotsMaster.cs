@@ -7,7 +7,10 @@ namespace KaitoMajima
 {
     public class GearSlotsMaster : MonoBehaviour
     {
+        [Header("Local Dependencies")]
         [SerializeField] private List<GearSlot> _gearSlots;
+
+        [Header("Settings")]
         [SerializeField] private float _rotationInterval = 0.25f;
         private int _insertedGearCount;
         private Coroutine _rotatingSequence;

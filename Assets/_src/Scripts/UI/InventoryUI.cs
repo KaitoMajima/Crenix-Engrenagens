@@ -6,10 +6,15 @@ namespace KaitoMajima
 {
     public class InventoryUI : MonoBehaviour
     {
+        [Header("Local Dependencies")]
         [SerializeField] private Inventory _inventory;
-        [SerializeField] private GameObject _slotPrefab;
+
+        [Header("Scene Dependencies")]
         [SerializeField] private Transform _slotsTransform;
         [SerializeField] private Transform _draggingObjectsTransform;
+
+        [Header("Prefab Dependencies")]
+        [SerializeField] private GameObject _slotPrefab;
         private List<InventorySlot> _currentInventorySlots;
 
         private void Awake()

@@ -6,7 +6,10 @@ namespace KaitoMajima
 {
     public class Inventory : MonoBehaviour
     {
+        [Header("Dependencies")]
         [SerializeField] private List<Item> _items;
+
+        [Header("Settings")]
         [SerializeField] private int _inventoryCapacity = 5;
         public int Capacity {get => _inventoryCapacity; set => _inventoryCapacity = value;}
         public Action<List<Item>> InventoryUpdated;
