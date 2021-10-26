@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "com.kaitomajima.tools": "file:C:/Users/edual/Local Documents/UnityPackages/Installable Packages/Tools",
     "com.unity.2d.animation": "5.0.7",
     "com.unity.2d.pixel-perfect": "4.0.1",
     "com.unity.2d.psdimporter": "4.0.2",
